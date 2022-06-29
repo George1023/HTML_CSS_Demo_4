@@ -1,17 +1,28 @@
 :root {
   --primary-color: #000;
   --secondary-color: #808080;
-  --accent: #b00000;
+  --accent-color: #b00000;
+  --primaty-font: 'Inter', sans-serif;
+  --secondary-font: 'Poppins', sans-serif;
+  --normal-font: 400;
+  --medium-font: 600;
+  --bold-font: 700;
+  --bolder-font: 800;
+  --primary-font-size: 12px;
+}
+
+body {
+  font-size: var(--primary-font-size);
 }
 
 .contained {
-  background: var(--accent);
+  background: var(--accent-color);
   color: #fff;
   box-shadow: 0px 0px 64px rgba(176, 0, 0, 0.3);
   border-radius: 8px;
   border: none;
   padding: 12px;
-  font-family: 'Poppins';
+  font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -23,8 +34,95 @@
   border: 1px solid #000;
   border-radius: 8px;
   padding: 12px;
-  font-family: 'Poppins';
-  font-weight: 400;
+  font-family: var(--secondary-font);
+  font-weight: var(--normal-font);
   font-size: 14px;
   line-height: 24px;
 }
+
+.content {
+  max-width: 1285px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  padding: 40px 0 0;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.logo {
+  width: 90px;
+  display: block;
+}
+
+.list {
+  padding-inline-start: 0;
+  list-style: none;
+  display: flex;
+}
+
+.menu {
+  margin: 0 33px 0 65px;
+}
+
+.menu-item:first-child {
+  margin: 0 135px 0 0;
+}
+
+.menu-item:first-child::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 2px;
+  background: var(--accent-color);
+  margin: 4px auto 0;
+}
+
+.menu-item {
+  margin: 0 33px 0 0;
+}
+
+.menu-item:last-child {
+  margin: 0 0 0 167px;
+  display: flex;
+}
+
+.menu-item:last-child .menu-link {
+  margin: 0 33px 0 0;
+}
+
+.menu-item:last-child::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: var(--secondary-color);
+  margin: 0 auto;
+}
+
+.menu-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-weight: var(--medium-font);
+  line-height: 22px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.phone {
+  margin-right: 6px;
+}
+/* Slider */
+
+/* Description */
+
+/* Footer */
